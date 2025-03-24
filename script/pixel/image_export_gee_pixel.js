@@ -27,14 +27,14 @@ var imageList = [
   filtered_sds,
   filtered_pf,
   filtered_pv,
-  ee.Image("projects/unicef-ccri/assets/JBA_FLSW_resampled"),
+  //ee.Image("projects/unicef-ccri/assets/JBA_FLSW_resampled"),
   ee.Image("projects/unicef-ccri/assets/sma_copernicus_avg_2015_2024"),
   ee.Image("projects/unicef-ccri/assets/spi_copernicus_avg_2015_2024")
 ];
 
 
 // Get the scale and projection from the ERA5 100-year RP layer
-var referenceImage = ee.Image("projects/unicef-ccri/assets/ERA5_100yr_RP");
+//var referenceImage = ee.Image("projects/unicef-ccri/assets/ERA5_100yr_RP");
 var targetScale = referenceImage.projection().nominalScale();
 var targetCRS = referenceImage.projection();
 
@@ -124,31 +124,32 @@ var exportToDrive = function(image, description, folderName) {
   });
 };
 
+var out_folder = 'ccri_pixel'
 // Export resampled image collections
-exportToDrive(imageCollectionResampled, 'river_flood_mosaic', 'clustering_image');
-exportToDrive(imageCollection2Resampled, 'coastal_flood_mosaic', 'clustering_image');
-exportToDrive(imageCollection3Resampled, 'storm_mosaic', 'clustering_image');
-exportToDrive(landSeaMask, 'landSeaMask', 'clustering_image');
+exportToDrive(imageCollectionResampled, 'river_flood_100yr_jrc_2024', out_folder);
+exportToDrive(imageCollection2Resampled, 'coastal_flood_100yr_jrc_2024', out_folder);
+exportToDrive(imageCollection3Resampled, 'tropical_storm_100yr_giri_2024', out_folder);
+exportToDrive(landSeaMask, 'landSeaMask', out_folder);
 
 // Export all images in `imageListResampled`
 var imageNames = [
-  'ERA5_100yr_RP_resampled',
-  'ASI_cropland_resampled',
-  'FIRMS_MODIS_Mean_Annual_Count_resampled',
-  'FIRMS_MODIS_Mean_Annual_FRP_2001_2023',
-  'heatwave_frequency_resampled',
-  'heatwave_duration_resampled',
-  'heatwave_severity_resampled',
-  'extreme_heat_days_resampled',
-  'pm25_resampled',
-  'sand_dust_storm_resampled',
-  'Pf_average_resampled',
-  'Pv_average_resampled',
-  'JBA_FLSW_resampled',
-  'SMA_resampled',
-  'SPI_resampled'
+  //'ERA5_100yr_RP_resampled',
+  'agricultural_drought_fao_1984-2023',
+  'fire_frequency_nasa_2001-2023',
+  'fire_FRP_nasa_2001-2024',
+  'heatwave_frequency_ecmwf_2014-2024',
+  'heatwave_duration_ecmwf_2014-2024',
+  'heatwave_severity_ecmwf_2014-2024',
+  'extreme_heat_ecmwf_2014-2024',
+  'air_pollution_pm25_2012-2022',
+  'sand_dust_storm_unccd_2024',
+  'vectorborne_malariapf_2012-2022',
+  'vectorborne_malariapv_2012-2022',
+  //'JBA_FLSW_resampled',
+  'drought_sma_copernicus_2014-2024',
+  'drought_spi_copernicus_2014-2024'
 ];
 
 imageListResampled.forEach(function(image, index) {
-  exportToDrive(image, imageNames[index], 'clustering_image');
+  exportToDrive(image, imageNames[index], out_folder);
 });
