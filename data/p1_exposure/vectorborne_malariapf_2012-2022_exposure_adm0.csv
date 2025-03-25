@@ -1,0 +1,290 @@
+ISO3,child_population_exposed,name
+ATA,0.0,Antarctica
+AIA,0.0,Anguilla
+ESH,0.0,Western Sahara
+PYF,0.0,French Polynesia
+PYF,0.0,Clipperton Island
+NCL,0.0,New Caledonia
+BMU,0.0,Bermuda
+GIB,0.0,Gibraltar
+VGB,0.0,British Virgin Islands
+CYM,0.0,Cayman Islands
+FLK,0.0,Falkland Islands (Malvinas)
+MSR,0.0,Montserrat
+PCN,0.0,Pitcairn
+SHN,0.0,Saint Helena (Ascencion)
+SHN,0.0,Saint Helena (Gough)
+SHN,0.0,Saint Helena (Tristan da Cunha)
+SHN,0.0,Saint Helena
+TKL,0.0,Tokelau
+TCA,0.0,Turks and Caicos Islands
+ASM,0.0,American Samoa (USA)
+GUM,0.0,Guam (USA)
+VIR,0.0,United States Virgin Islands (USA)
+GRL,0.0,Greenland
+EGY,0.0,Bi'r Tawīl
+xAP,77964.72750132202,Arunachal Pradesh
+xSK,0.0,Senkaku Islands
+xRI,0.0,Kuril Islands
+SDN,0.0,Hala'ib Triangle
+SSD,1936.5142461919208,Ilemi Triangle
+xAB,70817.26114221835,Abyei
+xAC,0.0,Aksai Chin
+xJK,5104.148254783365,Jammu and Kashmir
+xJL,0.0,Sovereignty unsettled
+xPI,0.0,Paracel Islands
+xSI,0.0,Spratly Islands
+xSR,0.0,Scarborough Reef
+xxx,0.0,China/India
+MAC,0.0,Macao
+HKG,0.0,Hong Kong
+TWN,0.0,Taiwan
+AFG,2072847.5635320127,Afghanistan
+AGO,1.5984152561473832E7,Angola
+ALB,0.0,Albania
+AND,0.0,Andorra
+ARE,0.0,United Arab Emirates
+ARG,0.0,Argentina
+ARM,0.0,Armenia
+ATG,0.0,Antigua and Barbuda
+AUS,0.0,Australia
+AUT,0.0,Austria
+AZE,0.0,Azerbaijan
+BDI,5732975.563912541,Burundi
+BEL,0.0,Belgium
+BEN,5940087.372556489,Benin
+BFA,9858777.269773345,Burkina Faso
+BGD,2884532.8896645326,Bangladesh
+BGR,0.0,Bulgaria
+BHR,0.0,Bahrain
+BHS,0.0,Bahamas
+BIH,0.0,Bosnia and Herzegovina
+BLR,0.0,Belarus
+BLZ,0.0,Belize
+BOL,20166.620817428622,Bolivia (Plurinational State of)
+BRA,630715.0132726274,Brazil
+BRB,0.0,Barbados
+BRN,701.3147512516007,Brunei Darussalam
+BTN,4864.718660909544,Bhutan
+BWA,400590.3447644539,Botswana
+CAF,2561020.249804477,Central African Republic
+CAN,0.0,Canada
+CHE,0.0,Switzerland
+CHL,0.0,Chile
+CHN,4162.145700670194,China
+CIV,1.281134369627225E7,Côte d'Ivoire
+CMR,1.1763957237455143E7,Cameroon
+COD,4.6202903247294396E7,Democratic Republic of the Congo
+COG,2595609.99001706,Congo
+COL,366051.08690106444,Colombia
+COM,274674.45359852933,Comoros
+CPV,45808.44191041083,Cape Verde
+CRI,0.0,Costa Rica
+CUB,0.0,Cuba
+CYP,0.0,Cyprus
+CZE,0.0,Czechia
+DEU,0.0,Germany
+DJI,330761.2309760838,Djibouti
+DMA,0.0,Dominica
+DNK,0.0,Denmark
+DOM,61209.32996051171,Dominican Republic
+DZA,10.564591303058698,Algeria
+ECU,24956.747927980774,Ecuador
+EGY,0.0,Egypt
+ERI,1353671.1126477418,Eritrea
+ESP,0.0,Spain
+EST,0.0,Estonia
+ETH,4.304497336002348E7,Ethiopia
+FIN,0.0,Finland
+FJI,0.0,Fiji
+FRA,0.0,France
+FSM,0.0,Micronesia (Federated States of)
+GAB,803423.1216561995,Gabon
+GBR,0.0,United Kingdom of Great Britain & Northern Ireland
+GEO,0.0,Georgia
+GHA,1.2180890223371707E7,Ghana
+GIN,5902581.505368789,Guinea
+GMB,1029278.3011976269,Gambia
+GNB,773451.5005127472,Guinea-Bissau
+GNQ,591238.4545203886,Equatorial Guinea
+GRC,0.0,Greece
+GRD,0.0,Grenada
+GTM,1072.9154817909002,Guatemala
+GUY,217873.01145758748,Guyana
+HND,23970.299447785175,Honduras
+HRV,0.0,Croatia
+HTI,2127201.8800131455,Haiti
+HUN,0.0,Hungary
+IDN,1.065414026596891E7,Indonesia
+IND,5.273115506847277E7,India
+IRL,0.0,Ireland
+IRN,2919.5116135603434,Iran (Islamic Republic of)
+IRQ,0.0,Iraq
+ISL,0.0,Iceland
+ISR,0.0,Israel
+ITA,0.0,Italy
+JAM,0.0,Jamaica
+JOR,0.0,Jordan
+JPN,0.0,Japan
+KAZ,0.0,Kazakhstan
+KEN,1.7574350093111176E7,Kenya
+KGZ,0.0,Kyrgyzstan
+KHM,1714710.836566495,Cambodia
+KIR,0.0,Kiribati
+KNA,0.0,Saint Kitts and Nevis
+KOR,0.0,Republic of Korea
+KWT,0.0,Kuwait
+LAO,778270.2547050165,Lao People's Democratic Republic
+LBN,0.0,Lebanon
+LBR,1998184.8432843739,Liberia
+LBY,0.0,Libya
+LCA,0.0,Saint Lucia
+LIE,0.0,Liechtenstein
+LKA,0.0,Sri Lanka
+LSO,0.0,Lesotho
+LTU,0.0,Lithuania
+LUX,0.0,Luxembourg
+LVA,0.0,Latvia
+MAR,0.0,Morocco
+MCO,0.0,Monaco
+MDA,0.0,Moldova
+MDG,1.172172736446212E7,Madagascar
+MDV,0.0,Maldives
+MEX,0.0,Mexico
+MHL,0.0,Marshall Islands
+MKD,0.0,North Macedonia
+MLI,1.0962300807199383E7,Mali
+MLT,0.0,Malta
+MMR,7009777.736640129,Myanmar
+MNE,0.0,Montenegro
+MNG,0.0,Mongolia
+MOZ,1.4812805563031059E7,Mozambique
+MRT,1919212.9765204506,Mauritania
+MUS,0.0,Mauritius
+MWI,8871326.54426525,Malawi
+MYS,23842.592011830908,Malaysia
+NAM,697738.0381147715,Namibia
+NER,1.2140088398744756E7,Niger
+NGA,9.524339808150904E7,Nigeria
+NIC,77839.97306529972,Nicaragua
+NLD,0.0,Netherlands
+NOR,0.0,Norway
+NPL,28242.84678680549,Nepal
+NRU,0.0,Nauru
+NZL,0.0,New Zealand
+OMN,163.4039746191316,Oman
+PAK,2.5927625450176734E7,Pakistan
+PAN,3271.611710455931,Panama
+PER,105031.71760682254,Peru
+PHL,581329.8143462042,Philippines
+PLW,0.0,Palau
+PNG,2757120.6153856767,Papua New Guinea
+POL,0.0,Poland
+PRK,0.0,Democratic People's Republic of Korea
+PRT,0.0,Portugal
+PRY,0.0,Paraguay
+PSE,0.0,State of Palestine
+QAT,0.0,Qatar
+ROU,0.0,Romania
+RUS,0.0,Russian Federation
+RWA,4360028.431016073,Rwanda
+SAU,18576.577475132977,Saudi Arabia
+SDN,1.968642635947396E7,Sudan
+SEN,6865885.57078262,Senegal
+SGP,0.0,Singapore
+SLB,202942.81540700875,Solomon Islands
+SLE,3135132.856957084,Sierra Leone
+SLV,0.0,El Salvador
+SMR,0.0,San Marino
+SOM,8188603.812709395,Somalia
+SRB,0.0,Serbia
+SSD,4802189.595260661,South Sudan
+STP,72988.89489656466,Sao Tome and Principe
+SUR,7547.434311537105,Suriname
+SVK,0.0,Slovakia
+SVN,0.0,Slovenia
+SWE,0.0,Sweden
+SWZ,14637.543972238926,Eswatini
+SYC,0.0,Seychelles
+SYR,0.0,Syrian Arab Republic
+TCD,7812386.803791682,Chad
+TGO,3734239.2517293477,Togo
+THA,24627.92215343295,Thailand
+TJK,0.0,Tajikistan
+TKM,0.0,Turkmenistan
+TLS,3282.9539721795986,Timor-Leste
+TON,0.0,Tonga
+TTO,0.0,Trinidad and Tobago
+TUN,0.0,Tunisia
+TUR,0.0,Republic of Türkiye
+TUV,0.0,Tuvalu
+TZA,2.8031805930730145E7,United Republic of Tanzania
+UGA,2.1206172236089397E7,Uganda
+UKR,0.0,Ukraine
+URY,0.0,Uruguay
+USA,0.0,United States of America
+UZB,0.0,Uzbekistan
+VAT,0.0,Holy See
+VCT,0.0,Saint Vincent and the Grenadines
+VEN,1515449.288468734,Venezuela
+VNM,555574.3648400607,Viet Nam
+VUT,24152.96938060715,Vanuatu
+WSM,0.0,Samoa
+YEM,1.0509677313871052E7,Yemen
+ZAF,2445935.0475130826,South Africa
+ZMB,8824933.6651031,Zambia
+ZWE,6809184.537086035,Zimbabwe
+AUS,0.0,Ashmore and Cartier Islands
+CXR,0.0,Christmas Island
+CCK,0.0,Cocos (Keeling) Islands
+HMD,0.0,Heard Island and McDonald Islands
+NFK,0.0,Norfolk Island
+FRO,0.0,Faroe Islands
+ESP,0.0,Canary Islands
+ALA,0.0,Åland Islands
+ATF,0.0,Bassas da India
+GUF,8441.091560275547,French Guiana
+ATF,0.0,French Southern Territories
+ATF,0.0,Europa Island
+GLP,0.0,Guadeloupe
+ATF,0.0,Juan de Nova Island
+MTQ,0.0,Martinique
+BLM,0.0,Saint Barthélemy
+MYT,0.0,Mayotte
+REU,0.0,Réunion
+SPM,0.0,Saint Pierre et Miquelon
+xFR,0.0,Tromelin Island
+WLF,0.0,Wallis and Futuna
+MAF,0.0,Saint Martin
+xFR,0.0,Glorioso Islands
+IOT,0.0,Chagos Archipelagio
+GGY,0.0,Guernsey
+IMN,0.0,Isle of Man
+JEY,0.0,Jersey
+SGS,0.0,South Georgia and the South Sandwich Islands
+xUK,0.0,Akrotiri
+xUK,0.0,Dekelia
+ABW,0.0,Aruba
+CUW,0.0,Curaçao
+BES,0.0,Saba
+BES,0.0,Sint Eustatius
+BES,0.0,Bonaire
+SXM,0.0,Sint Maarten
+BVT,0.0,Bouvet Island
+SJM,0.0,Svalbard and Jan Mayen Islands
+COK,0.0,Cook Islands
+NIU,0.0,Niue
+PRT,0.0,Azores Islands
+PRT,0.0,Madeira Islands
+UMI,0.0,Baker Island
+UMI,0.0,Wake Island
+UMI,0.0,Howland Island
+UMI,0.0,Jarvis Island
+UMI,0.0,Johnston Atoll
+UMI,0.0,Kingman Reef
+UMI,0.0,Midway Islands
+UMI,0.0,Palmyra Atoll
+UMI,0.0,Navassa Island
+MNP,0.0,Northern Mariana Is. (USA)
+PRI,0.0,Puerto Rico (USA)
+VEN,0.0,Bird Island
