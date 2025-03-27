@@ -1,4 +1,7 @@
-var childpop = ee.ImageCollection("projects/unicef-ccri/assets/childpop_constrained").mosaic();
+var childpop = ee.ImageCollection("projects/unicef-ccri/assets/childpop_constrained")
+var pop_target_res = childpop.first().projection().nominalScale();
+print(pop_target_res);
+childpop = childpop.mosaic();
 
 // List of hazard data with thresholds and names
 var hazards = [
@@ -110,7 +113,7 @@ function summarizePopulation(hazard, adm_level) {
   var populationByAOI = exposed_population.reduceRegions({
     collection: aois,
     reducer: ee.Reducer.sum(),
-    scale: 100,
+    scale: pop_target_res,
     crs: 'EPSG:4326'
   });
 
