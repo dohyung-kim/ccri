@@ -1,7 +1,19 @@
-var childpop = ee.ImageCollection("projects/unicef-ccri/assets/childpop_constrained")
+//original childpop
+var org_childpop = ee.ImageCollection("projects/unicef-ccri/assets/childpop_constrained")
+// Image to be replaced (by system:index)
+var imageToReplaceId = 'tha_T_Under_18_2024_CN_100m_R2024A_v1';
+// Load the new image and set the system:index property explicitly
+var newImage = ee.Image('projects/unicef-ccri/assets/tha_T_Under_18_2024_CN_100m_R2024A_v1')
+                .set('system:index', imageToReplaceId);
+// Filter out the old image
+var filteredCollection = org_childpop.filter(ee.Filter.neq('system:index', imageToReplaceId));
+// Merge the new image back
+var childpop = filteredCollection.merge(ee.ImageCollection([newImage]));
 var pop_target_res = childpop.first().projection().nominalScale();
 print(pop_target_res);
 childpop = childpop.mosaic();
+var totalpop = ee.Image("projects/unicef-ccri/assets/worldpop_1km");
+var totalpop_res = totalpop.projection().nominalScale();
 
 // List of hazard data with thresholds and names
 var hazards = [
@@ -9,9 +21,9 @@ var hazards = [
   {id: "projects/unicef-ccri/assets/coastal_flood_r100", threshold: 0, name: "coastal_flood_100yr_jrc_2024"},
   {id: "projects/unicef-ccri/assets/JBA_FLSW_resampled", threshold: 0, name: "pluvial_flood_100yr_jbl_2024"},
   {id: "projects/unicef-ccri/assets/storm_giri_rp100", threshold: 17.5, name: "tropical_storm_100yr_giri_2024"},
-  {id: "projects/unicef-ccri/assets/ASI_cropland_avg_2014_2023", threshold: 0, name: "agricultural_drought_fao_1984-2023"},
-  {id: "projects/unicef-ccri/assets/sma_copernicus_avg_2015_2024", threshold: 0, name: "drought_sma_copernicus_1984-2023"},
-  {id: "projects/unicef-ccri/assets/spi_copernicus_avg_2015_2024", threshold: 0, name: "drought_spi_copernicus_1984-2023"},
+  {id: "projects/unicef-ccri/assets/ASI_cropland_avg_2014_2023", threshold: 30, name: "agricultural_drought_fao_1984-2023"},
+  {id: "projects/unicef-ccri/assets/sma_copernicus_avg_2015_2024", threshold: -1, name: "drought_sma_copernicus_1984-2023"},
+  {id: "projects/unicef-ccri/assets/spi_copernicus_avg_2015_2024", threshold: -1, name: "drought_spi_copernicus_1984-2023"},
   {id: "projects/unicef-ccri/assets/heatwave_frequency_2014_2023_avg", threshold: 'Mean', name: "heatwave_frequency_ecmwf_2014-2024"}, //6.03
   {id: "projects/unicef-ccri/assets/heatwave_duration_2014_2023_avg", threshold: 'Mean', name: "heatwave_duration_ecmwf_2014-2024"}, //35.99
   {id: "projects/unicef-ccri/assets/heatwave_severity_2014_2023_avg", threshold: 'Mean', name: "heatwave_severity_ecmwf_2014-2024"}, //21.19
@@ -19,7 +31,7 @@ var hazards = [
   {id: "projects/unicef-ccri/assets/FIRMS_MODIS_Mean_Annual_FRP_2001_2023", threshold: 'Mean', name: "fire_FRP_nasa_2001-2024"},
   {id: "projects/unicef-ccri/assets/FIRMS_MODIS_Mean_Annual_Count_2001_2023", threshold: 'Mean', name: "fire_frequency_nasa_2001-2023"},
   {id: "projects/unicef-ccri/assets/sand_dust_storm_annual", threshold: 0, name: "sand_dust_storm_unccd_2024"},
-  {id: "projects/unicef-ccri/assets/pm25_2013_2022_avg", threshold: 15, name: "air_pollution_pm25_2012-2022"},
+  {id: "projects/unicef-ccri/assets/pm25_2013_2022_avg", threshold: 5, name: "air_pollution_pm25_2012-2022"},
   {id: "projects/unicef-ccri/assets/Pv_average_2013_2022", threshold: 0.001, name: "vectorborne_malariapv_2012-2022"},
   {id: "projects/unicef-ccri/assets/Pf_average_2013_2022", threshold: 0.001, name: "vectorborne_malariapf_2012-2022"}
 ];
@@ -109,25 +121,51 @@ function summarizePopulation(hazard, adm_level) {
   // Determine scale dynamically
   var scale = hazard_layer.projection().nominalScale();
 
-  // Aggregate exposure at the administrative level
   var populationByAOI = exposed_population.reduceRegions({
+  collection: aois,
+  reducer: ee.Reducer.sum(),
+  scale: pop_target_res,
+  crs: 'EPSG:4326'
+  });
+  
+  var totalpop_aoi = totalpop.reduceRegions({
+    collection: aois,
+    reducer: ee.Reducer.sum(),
+    scale: totalpop_res
+  });
+  
+  var totalchildByAOI = childpop.reduceRegions({
     collection: aois,
     reducer: ee.Reducer.sum(),
     scale: pop_target_res,
     crs: 'EPSG:4326'
   });
-
-  // Format output
-  var finalCollection = populationByAOI.map(function(feature) {
-    return feature.set('child_population_exposed', feature.get('sum'));
-  });
-
+  
+  // Convert to lists
+  var exposedList = populationByAOI.toList(populationByAOI.size());
+  var totalpopList = totalpop_aoi.toList(totalpop_aoi.size());
+  var totalchildList = totalchildByAOI.toList(totalchildByAOI.size());
+  
+  // Index-based merge
+  var indices = ee.List.sequence(0, exposedList.size().subtract(1));
+  
+  var finalCollection = ee.FeatureCollection(indices.map(function(i) {
+    var f_exposed = ee.Feature(exposedList.get(i));
+    var f_totalpop = ee.Feature(totalpopList.get(i));
+    var f_totalchild = ee.Feature(totalchildList.get(i));
+  
+    return f_exposed
+      .set('child_population_exposed', f_exposed.get('sum'))
+      .set('population_total', f_totalpop.get('sum'))
+      .set('child_population_total', f_totalchild.get('sum'));
+  }));
+  
   // Export to CSV
   Export.table.toDrive({
     collection: finalCollection,
     description: hazard.name + '_exposure_' + adm_level,
     fileFormat: 'CSV',
-    selectors: ['ISO3', 'name','ucode', 'child_population_exposed'],
+    selectors: ['ISO3', 'name','ucode', 'child_population_exposed','child_population_total','population_total'],
     folder: 'p1_exposure'
   });
 
