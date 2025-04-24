@@ -1,42 +1,19 @@
-﻿vulnerability,filename,min,max,,,,,
-Health – DTP1 access,P2_Immunization_DTP1,45,98,,,,,
-Health – DTP3 access,P2_Immunization_DTP3,40,98,,,,,
-Health – Skilled birth coverage,P2_Birth_Attendant_Y15T19,25,100,,,,,
-Health – Access to electricity,P2_electricity_access,10,100,,,,,
-Nutrition - Stunting,P2_Nutrition_Stunting_Modeled,1,50,,,,,
-Nutrition - Wasting,P2_Nutrition_Wasting,0,10,,,,,
-Nutrition – Child Food Poverty,P2_food_poverty,0,70,,,,,
-WASH – At-least basic drinking water,P2_WASH_Drinking_Water,35,100,,,,,
-WASH – At-least basic sanitation,P2_WASH_Sanitation,10,100,,,,,
-WASH – Basic hygiene,P2_basic_hygiene,4,100,,,,,
-Education – Lower secondary out of school,P2_LSCED,1,70,,,,,
-Education – Lower secondary completion rate,P2_ED_CR_L2,1,100,,,,,
-Education – Learning poverty,P2_Learning_Poverty,3,98,,,,,
-Protection – Child labor,P2_PT_Labor,1,40,,,,,
-Protection – Child marriage,P2_Child_Marriage,0,76,,,,,
-Poverty – Child poverty,P2_Child_poverty,3,83,,,,,
-Poverty – Under five covered by social protection,P2_Social_Protection,0,100,,,,,
-Survival – Under five mortality,P2_Child_Mortality,1,30,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+﻿vulnerability,filename,min,max
+Health – DTP1 access,P2_Immunization_DTP1,45,98
+Health – DTP3 access,P2_Immunization_DTP3,40,98
+Health – Skilled birth coverage,P2_Birth_Attendant_Y15T19,25,100
+Health – Access to electricity,P2_electricity_access,10,100
+Nutrition - Stunting,P2_Nutrition_Stunting_Modeled,1,50
+Nutrition - Wasting,P2_Nutrition_Wasting,0,10
+Nutrition – Child Food Poverty,P2_food_poverty,0,70
+WASH – At-least basic drinking water,P2_WASH_Drinking_Water,35,100
+WASH – At-least basic sanitation,P2_WASH_Sanitation,10,100
+WASH – Basic hygiene,P2_basic_hygiene,4,100
+Education – Lower secondary out of school,P2_LSCED,1,70
+Education – Lower secondary completion rate,P2_ED_CR_L2,1,100
+Education – Learning poverty,P2_Learning_Poverty,3,98
+Protection – Child labor,P2_PT_Labor,1,40
+Protection – Child marriage,P2_Child_Marriage,0,76
+Poverty – Child poverty,P2_Child_poverty,3,83
+Poverty – Under five covered by social protection,P2_Social_Protection,0,100
+Survival – Under five mortality,P2_Under5_Mortality,1,100
