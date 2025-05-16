@@ -41,3 +41,20 @@ P2 Hazards:
 * P2 Child Poverty: prov_md
 * P2 Social Protection: prov_u5sp
 * P2 Under 5 Mortality: sur_u5mor
+
+`script/sdm_formatting/sdmx_formatting.ipynb` processes the hazard layers into the final SDMX format for the database.
+The headings are determined by the broader team, they are as follows:
+* DATAFLOW = UNICEF_DRAFT:DRAFT_HAZARD_EXPOSURE(1.0)
+* REF_AREA = Unique ucode for the AOI
+* INDICATOR = Refers to the hazard exposure (i.e. Total River Flood exposure is HAZ_RFL_EXP_TOT)
+* SEX = Refers to the sex of the exposed population. _T is all sexes, M is male, F is female.
+* AGE = Refers to the age of the exposed population. _T refers to all population, Y0T17 refers to under 18.
+* GEO_LEVEL = Refers to the AOI level for which the hazard layer. COUNTRY for country-level, REGION for all other levels.
+* MEASURE = The measurement type referring to OBS_VALUE. This is one of EXPOSURE_ABSOLUTE, EXPOSURE_RELATIVE, Max, Median, Min, Mean.
+* ISO3_PARENT = Parent ISO3 code to the AOI
+* ADMIN_LEVEL = Administrative level of the AOI
+* TIME_PERIOD = Time period that measure is relevant for (2024/2025)
+* OBS_VALUE = Observational value for the hazard exposure.
+* UNICEF_RO = UNICEF Regional Office corresponding to the AOI
+* WB_INCOME = World Bank income corresponding to the ISO3
+* UNIT_MEASURE = Measurement unit of NUMBER or PCNT for exposure. "NUMBER" if MEASURE is one of EXPOSURE_ABSOLUTE, Mean, Median, Max, Min. "PCNT" if MEASURE is EXPOSURE_RELATIVE
