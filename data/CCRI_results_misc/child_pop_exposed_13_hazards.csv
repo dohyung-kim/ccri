@@ -28,7 +28,7 @@ xSK,Senkaku Islands,xSK_V1,0.0
 xRI,Kuril Islands,xRI_V1,0.0
 SDN,Hala'ib Triangle,SDN1_V1,0.0
 SSD,Ilemi Triangle,SSD1_V1,0.0
-xAB,Abyei,xAB_V1,0.0
+xAB,Abyei,xAB_V1,218.65172711225117
 xAC,Aksai Chin,xAC_V1,0.0
 xJK,Jammu and Kashmir,xJK_V1,0.0
 xJL,Sovereignty unsettled,xJL_V1,0.0
@@ -47,7 +47,7 @@ ARE,United Arab Emirates,ARE_V1,0.0
 ARG,Argentina,ARG_V1,0.0
 ARM,Armenia,ARM_V1,0.0
 ATG,Antigua and Barbuda,ATG_V1,0.0
-AUS,Australia,AUS_V1,0.0778020002762787
+AUS,Australia,AUS_V1,0.0
 AUT,Austria,AUT_V1,0.0
 AZE,Azerbaijan,AZE_V1,0.0
 BDI,Burundi,BDI_V1,0.0
@@ -61,7 +61,7 @@ BHS,Bahamas,BHS_V1,0.0
 BIH,Bosnia and Herzegovina,BIH_V1,0.0
 BLR,Belarus,BLR_V1,0.0
 BLZ,Belize,BLZ_V1,0.0
-BOL,Bolivia (Plurinational State of),BOL_V1,0.0
+BOL,Bolivia (Plurinational State of),BOL_V1,0.7401290033012629
 BRA,Brazil,BRA_V1,0.0
 BRB,Barbados,BRB_V1,0.0
 BRN,Brunei Darussalam,BRN_V1,0.0
@@ -129,7 +129,7 @@ JPN,Japan,JPN_V1,0.0
 KAZ,Kazakhstan,KAZ_V1,0.0
 KEN,Kenya,KEN_V1,0.0
 KGZ,Kyrgyzstan,KGZ_V1,0.0
-KHM,Cambodia,KHM_V1,20.210545986890793
+KHM,Cambodia,KHM_V1,0.0
 KIR,Kiribati,KIR_V1,0.0
 KNA,Saint Kitts and Nevis,KNA_V1,0.0
 KOR,Republic of Korea,KOR_V1,0.0
@@ -145,20 +145,20 @@ LSO,Lesotho,LSO_V1,0.0
 LTU,Lithuania,LTU_V1,0.0
 LUX,Luxembourg,LUX_V1,0.0
 LVA,Latvia,LVA_V1,0.0
-MAR,Morocco,MAR_V1,0.0
+MAR,Morocco,MAR_V1,0.8968759775161743
 MCO,Monaco,MCO_V1,0.0
 MDA,Moldova,MDA_V1,0.0
-MDG,Madagascar,MDG_V1,7.161013975739479
+MDG,Madagascar,MDG_V1,548.8146864101291
 MDV,Maldives,MDV_V1,0.0
 MEX,Mexico,MEX_V1,0.0
 MHL,Marshall Islands,MHL_V1,0.0
 MKD,North Macedonia,MKD_V1,0.0
 MLI,Mali,MLI_V1,0.0
 MLT,Malta,MLT_V1,0.0
-MMR,Myanmar,MMR_V1,0.0
+MMR,Myanmar,MMR_V1,123.86851155757904
 MNE,Montenegro,MNE_V1,0.0
 MNG,Mongolia,MNG_V1,0.0
-MOZ,Mozambique,MOZ_V1,1142.3691242877394
+MOZ,Mozambique,MOZ_V1,0.0
 MRT,Mauritania,MRT_V1,0.0
 MUS,Mauritius,MUS_V1,0.0
 MWI,Malawi,MWI_V1,0.0
@@ -189,7 +189,7 @@ ROU,Romania,ROU_V1,0.0
 RUS,Russian Federation,RUS_V1,0.0
 RWA,Rwanda,RWA_V1,0.0
 SAU,Saudi Arabia,SAU_V1,0.0
-SDN,Sudan,SDN_V1,0.0
+SDN,Sudan,SDN_V1,879.8874566555023
 SEN,Senegal,SEN_V1,0.0
 SGP,Singapore,SGP_V1,0.0
 SLB,Solomon Islands,SLB_V1,0.0
@@ -198,7 +198,7 @@ SLV,El Salvador,SLV_V1,0.0
 SMR,San Marino,SMR_V1,0.0
 SOM,Somalia,SOM_V1,0.0
 SRB,Serbia,SRB_V1,0.0
-SSD,South Sudan,SSD_V1,0.0
+SSD,South Sudan,SSD_V1,71.8240551331464
 STP,Sao Tome and Principe,STP_V1,0.0
 SUR,Suriname,SUR_V1,0.0
 SVK,Slovakia,SVK_V1,0.0
@@ -226,7 +226,7 @@ USA,United States of America,USA_V1,0.0
 UZB,Uzbekistan,UZB_V1,0.0
 VAT,Holy See,VAT_V1,0.0
 VCT,Saint Vincent and the Grenadines,VCT_V1,0.0
-VEN,Venezuela,VEN_V1,0.0
+VEN,Venezuela,VEN_V1,124.7158399708569
 VNM,Viet Nam,VNM_V1,0.0
 VUT,Vanuatu,VUT_V1,0.0
 WSM,Samoa,WSM_V1,0.0
