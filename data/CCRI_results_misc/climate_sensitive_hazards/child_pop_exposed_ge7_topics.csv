@@ -1,0 +1,290 @@
+ISO3,name,ucode,pop_exposed
+ATA,Antarctica,ATA_V1,0.0
+GRL,Greenland,GRL_V1,0.0
+AFG,Afghanistan,AFG_V1,163137.98898366076
+AGO,Angola,AGO_V1,8906.990242712265
+ARG,Argentina,ARG_V1,28.16917491296772
+AUS,Australia,AUS_V1,1033.6705443637388
+BOL,Bolivia (Plurinational State of),BOL_V1,26456.44196924956
+BRA,Brazil,BRA_V1,22669.64091291743
+BWA,Botswana,BWA_V1,170.17572623611628
+CAF,Central African Republic,CAF_V1,57008.04637677439
+CAN,Canada,CAN_V1,0.0
+CHL,Chile,CHL_V1,0.0
+CHN,China,CHN_V1,932706.5450394931
+CIV,Côte d'Ivoire,CIV_V1,4045.9326496462318
+CMR,Cameroon,CMR_V1,94722.60076642397
+COD,Democratic Republic of the Congo,COD_V1,113773.7861271577
+COG,Congo,COG_V1,479.15017660589723
+COL,Colombia,COL_V1,15000.638182987666
+DEU,Germany,DEU_V1,0.0
+DZA,Algeria,DZA_V1,135.5894904829329
+EGY,Egypt,EGY_V1,8862.83197017014
+ESP,Spain,ESP_V1,13388.710257013128
+ETH,Ethiopia,ETH_V1,64606.02774900076
+FIN,Finland,FIN_V1,0.0
+FRA,France,FRA_V1,1.3733880037616473
+IDN,Indonesia,IDN_V1,6551.406090984121
+IND,India,IND_V1,902186.860208091
+IRN,Iran (Islamic Republic of),IRN_V1,29166.76762688237
+IRQ,Iraq,IRQ_V1,46231.90664523688
+ITA,Italy,ITA_V1,0.0
+JPN,Japan,JPN_V1,1258.3647349550938
+KAZ,Kazakhstan,KAZ_V1,1822.710093145026
+KEN,Kenya,KEN_V1,15561.930149562704
+LBY,Libya,LBY_V1,1361.9284688159823
+MAR,Morocco,MAR_V1,38201.190520226955
+MDG,Madagascar,MDG_V1,278410.0456477476
+MEX,Mexico,MEX_V1,11402.477321539522
+MLI,Mali,MLI_V1,280741.1769434372
+MMR,Myanmar,MMR_V1,2614414.499829498
+MNG,Mongolia,MNG_V1,0.0
+MOZ,Mozambique,MOZ_V1,713014.8116533966
+MRT,Mauritania,MRT_V1,28055.277988259688
+MYS,Malaysia,MYS_V1,0.0
+NAM,Namibia,NAM_V1,2501.1673634861886
+NER,Niger,NER_V1,96674.07265704924
+NGA,Nigeria,NGA_V1,536968.7448029321
+NOR,Norway,NOR_V1,0.0
+OMN,Oman,OMN_V1,1985.054935188382
+PAK,Pakistan,PAK_V1,798025.7532944286
+PER,Peru,PER_V1,1411.1148180277087
+PNG,Papua New Guinea,PNG_V1,643.5769842416048
+POL,Poland,POL_V1,0.0
+PRY,Paraguay,PRY_V1,0.9854659959673882
+RUS,Russian Federation,RUS_V1,7.667181033408269
+SAU,Saudi Arabia,SAU_V1,642.5582616794854
+SDN,Sudan,SDN_V1,1176966.6390762746
+SOM,Somalia,SOM_V1,321641.254987369
+SSD,South Sudan,SSD_V1,768473.6933892585
+SWE,Sweden,SWE_V1,0.0
+TCD,Chad,TCD_V1,277276.72276726994
+THA,Thailand,THA_V1,94046.2710007552
+TKM,Turkmenistan,TKM_V1,24056.31859434149
+TUR,Republic of Türkiye,TUR_V1,26.75428128335625
+TZA,United Republic of Tanzania,TZA_V1,4813.671833041536
+UKR,Ukraine,UKR_V1,0.17037499696016312
+USA,United States of America,USA_V1,27974.621054209194
+UZB,Uzbekistan,UZB_V1,1181.868112451324
+VEN,Venezuela,VEN_V1,157153.54609869476
+VNM,Viet Nam,VNM_V1,1568681.2455005709
+YEM,Yemen,YEM_V1,74674.47059425822
+ZAF,South Africa,ZAF_V1,10903.51355640273
+ZMB,Zambia,ZMB_V1,15509.441066457894
+ZWE,Zimbabwe,ZWE_V1,826.2654358749032
+AIA,Anguilla,AIA_V1,0.0
+ESH,Western Sahara,ESH_V1,669.0260701924562
+PYF,French Polynesia,PYF_V1,0.0
+PYF,Clipperton Island,PYF1_V1,0.0
+NCL,New Caledonia,NCL_V1,0.0
+BMU,Bermuda,BMU_V1,0.0
+GIB,Gibraltar,GIB_V1,0.0
+VGB,British Virgin Islands,VGB_V1,0.0
+CYM,Cayman Islands,CYM_V1,0.0
+MSR,Montserrat,MSR_V1,0.0
+PCN,Pitcairn,PCN_V1,0.0
+SHN,Saint Helena (Ascencion),SHN1_V1,0.0
+SHN,Saint Helena (Gough),SHN3_V1,0.0
+SHN,Saint Helena (Tristan da Cunha),SHN2_V1,0.0
+SHN,Saint Helena,SHN_V1,0.0
+TKL,Tokelau,TKL_V1,0.0
+TCA,Turks and Caicos Islands,TCA_V1,0.0
+ASM,American Samoa (USA),ASM_V1,0.0
+GUM,Guam (USA),GUM_V1,0.0
+VIR,United States Virgin Islands (USA),VIR_V1,0.0
+EGY,Bi'r Tawīl,EGY1_V1,0.0
+xAP,Arunachal Pradesh,xAP_V1,0.0
+xSK,Senkaku Islands,xSK_V1,0.0
+xRI,Kuril Islands,xRI_V1,0.0
+SDN,Hala'ib Triangle,SDN1_V1,0.0
+SSD,Ilemi Triangle,SSD1_V1,76.50988965388387
+xAB,Abyei,xAB_V1,39984.85235204732
+xAC,Aksai Chin,xAC_V1,0.0
+xJK,Jammu and Kashmir,xJK_V1,596.5005519792146
+xJL,Sovereignty unsettled,xJL_V1,0.0
+xPI,Paracel Islands,xPI_V1,0.0
+xSI,Spratly Islands,xSI_V1,0.0
+xSR,Scarborough Reef,xSR_V1,0.0
+xxx,China/India,xxx_V1,0.0
+MAC,Macao,MAC_V1,0.0
+HKG,Hong Kong,HKG_V1,0.0
+TWN,Taiwan,TWN_V1,111.44887163676322
+ALB,Albania,ALB_V1,0.0
+AND,Andorra,AND_V1,0.0
+ARE,United Arab Emirates,ARE_V1,68.81671535596251
+ARM,Armenia,ARM_V1,0.0
+ATG,Antigua and Barbuda,ATG_V1,0.0
+AUT,Austria,AUT_V1,0.0
+AZE,Azerbaijan,AZE_V1,88.11764061957889
+BDI,Burundi,BDI_V1,0.0
+BEL,Belgium,BEL_V1,0.0
+BEN,Benin,BEN_V1,20966.658289119026
+BFA,Burkina Faso,BFA_V1,46563.79503924129
+BGD,Bangladesh,BGD_V1,152182.11516378107
+BGR,Bulgaria,BGR_V1,0.0
+BHR,Bahrain,BHR_V1,0.0
+BHS,Bahamas,BHS_V1,0.01657600002363324
+BIH,Bosnia and Herzegovina,BIH_V1,0.0
+BLR,Belarus,BLR_V1,0.0
+BLZ,Belize,BLZ_V1,0.0
+BRB,Barbados,BRB_V1,0.0
+BRN,Brunei Darussalam,BRN_V1,0.0
+BTN,Bhutan,BTN_V1,0.0
+CHE,Switzerland,CHE_V1,0.0
+COM,Comoros,COM_V1,0.0
+CPV,Cape Verde,CPV_V1,65.9305809289217
+CRI,Costa Rica,CRI_V1,0.0
+CUB,Cuba,CUB_V1,2772.0716478126124
+CYP,Cyprus,CYP_V1,0.0
+CZE,Czechia,CZE_V1,0.0
+DJI,Djibouti,DJI_V1,6.253748059272766
+DMA,Dominica,DMA_V1,0.0
+DNK,Denmark,DNK_V1,0.0
+DOM,Dominican Republic,DOM_V1,361.5759608745575
+ECU,Ecuador,ECU_V1,0.0
+ERI,Eritrea,ERI_V1,11777.834046932763
+EST,Estonia,EST_V1,0.0
+FJI,Fiji,FJI_V1,0.0
+FSM,Micronesia (Federated States of),FSM_V1,0.0
+GAB,Gabon,GAB_V1,0.0
+GBR,United Kingdom of Great Britain & Northern Ireland,GBR_V1,0.0
+GEO,Georgia,GEO_V1,0.0
+GHA,Ghana,GHA_V1,16654.69298478064
+GIN,Guinea,GIN_V1,18026.632406507008
+GMB,Gambia,GMB_V1,6479.268543420586
+GNB,Guinea-Bissau,GNB_V1,1447.0985951572657
+GNQ,Equatorial Guinea,GNQ_V1,0.0
+GRC,Greece,GRC_V1,0.0
+GRD,Grenada,GRD_V1,0.0
+GTM,Guatemala,GTM_V1,65503.466738447365
+GUY,Guyana,GUY_V1,1177.4349026912823
+HND,Honduras,HND_V1,5853.6311092685255
+HRV,Croatia,HRV_V1,0.0
+HTI,Haiti,HTI_V1,326.38955787805946
+HUN,Hungary,HUN_V1,0.0
+IRL,Ireland,IRL_V1,0.0
+ISL,Iceland,ISL_V1,0.0
+ISR,Israel,ISR_V1,3.625429004430771
+JAM,Jamaica,JAM_V1,6.343454081565142
+JOR,Jordan,JOR_V1,0.25664201378822327
+KGZ,Kyrgyzstan,KGZ_V1,0.6976889967918396
+KHM,Cambodia,KHM_V1,1982691.2981243376
+KIR,Kiribati,KIR_V1,0.0
+KNA,Saint Kitts and Nevis,KNA_V1,0.0
+KOR,Republic of Korea,KOR_V1,0.0
+KWT,Kuwait,KWT_V1,0.0
+LAO,Lao People's Democratic Republic,LAO_V1,174590.84738454616
+LBN,Lebanon,LBN_V1,0.0
+LBR,Liberia,LBR_V1,0.0
+LCA,Saint Lucia,LCA_V1,0.0
+LIE,Liechtenstein,LIE_V1,0.0
+LKA,Sri Lanka,LKA_V1,23.90384605526924
+LSO,Lesotho,LSO_V1,0.0
+LTU,Lithuania,LTU_V1,0.0
+LUX,Luxembourg,LUX_V1,0.0
+LVA,Latvia,LVA_V1,0.0
+MCO,Monaco,MCO_V1,0.0
+MDA,Moldova,MDA_V1,0.0
+MDV,Maldives,MDV_V1,0.0
+MHL,Marshall Islands,MHL_V1,0.0
+MKD,North Macedonia,MKD_V1,0.0
+MLT,Malta,MLT_V1,0.0
+MNE,Montenegro,MNE_V1,0.0
+MUS,Mauritius,MUS_V1,0.0
+MWI,Malawi,MWI_V1,0.0
+NIC,Nicaragua,NIC_V1,3286.152627014084
+NLD,Netherlands,NLD_V1,0.0
+NPL,Nepal,NPL_V1,0.0
+NRU,Nauru,NRU_V1,0.0
+NZL,New Zealand,NZL_V1,0.0
+PAN,Panama,PAN_V1,0.0
+PHL,Philippines,PHL_V1,1.8824039921164513
+PLW,Palau,PLW_V1,0.0
+PRK,Democratic People's Republic of Korea,PRK_V1,171.08428575098515
+PRT,Portugal,PRT_V1,990.6995685166572
+PSE,State of Palestine,PSE_V1,0.0
+QAT,Qatar,QAT_V1,0.0
+ROU,Romania,ROU_V1,0.0
+RWA,Rwanda,RWA_V1,0.0
+SEN,Senegal,SEN_V1,94197.67270318288
+SGP,Singapore,SGP_V1,0.0
+SLB,Solomon Islands,SLB_V1,0.0
+SLE,Sierra Leone,SLE_V1,10572.078218730348
+SLV,El Salvador,SLV_V1,1220.8701025173068
+SMR,San Marino,SMR_V1,0.0
+SRB,Serbia,SRB_V1,0.0
+STP,Sao Tome and Principe,STP_V1,0.0
+SUR,Suriname,SUR_V1,0.0
+SVK,Slovakia,SVK_V1,0.0
+SVN,Slovenia,SVN_V1,0.0
+SWZ,Eswatini,SWZ_V1,489.2480945275165
+SYC,Seychelles,SYC_V1,0.0
+SYR,Syrian Arab Republic,SYR_V1,10806.031032479368
+TGO,Togo,TGO_V1,7421.292337837961
+TJK,Tajikistan,TJK_V1,298.38686662579283
+TLS,Timor-Leste,TLS_V1,0.0
+TON,Tonga,TON_V1,0.0
+TTO,Trinidad and Tobago,TTO_V1,0.0
+TUN,Tunisia,TUN_V1,0.8505129814147949
+TUV,Tuvalu,TUV_V1,0.0
+UGA,Uganda,UGA_V1,4789.092632941251
+URY,Uruguay,URY_V1,0.0
+VAT,Holy See,VAT_V1,0.0
+VCT,Saint Vincent and the Grenadines,VCT_V1,0.0
+VUT,Vanuatu,VUT_V1,0.0
+WSM,Samoa,WSM_V1,0.0
+AUS,Ashmore and Cartier Islands,AUS1_V1,0.0
+CXR,Christmas Island,CXR_V1,0.0
+CCK,Cocos (Keeling) Islands,CCK_V1,0.0
+NFK,Norfolk Island,NFK_V1,0.0
+FRO,Faroe Islands,FRO_V1,0.0
+ESP,Canary Islands,ESP1_V1,0.0
+ALA,Åland Islands,ALA_V1,0.0
+ATF,Bassas da India,ATF1_V1,0.0
+GUF,French Guiana,GUF_V1,0.0
+ATF,French Southern Territories,ATF_V1,0.0
+ATF,Europa Island,ATF2_V1,0.0
+GLP,Guadeloupe,GLP_V1,0.0
+ATF,Juan de Nova Island,ATF3_V1,0.0
+MTQ,Martinique,MTQ_V1,0.0
+BLM,Saint Barthélemy,BLM_V1,0.0
+MYT,Mayotte,MYT_V1,0.0
+REU,Réunion,REU_V1,0.0
+SPM,Saint Pierre et Miquelon,SPM_V1,0.0
+xFR,Tromelin Island,xFR1_V1,0.0
+WLF,Wallis and Futuna,WLF_V1,0.0
+MAF,Saint Martin,MAF_V1,0.0
+xFR,Glorioso Islands,xFR2_V1,0.0
+IOT,Chagos Archipelagio,IOT_V1,0.0
+GGY,Guernsey,GGY_V1,0.0
+IMN,Isle of Man,IMN_V1,0.0
+JEY,Jersey,JEY_V1,0.0
+xUK,Akrotiri,xUK1_V1,0.0
+xUK,Dekelia,xUK2_V1,0.0
+ABW,Aruba,ABW_V1,0.0
+CUW,Curaçao,CUW_V1,0.0
+BES,Saba,BES1_V1,0.0
+BES,Sint Eustatius,BES2_V1,0.0
+BES,Bonaire,BES3_V1,0.0
+SXM,Sint Maarten,SXM_V1,0.0
+SJM,Svalbard and Jan Mayen Islands,SJM_V1,0.0
+COK,Cook Islands,COK_V1,0.0
+NIU,Niue,NIU_V1,0.0
+PRT,Azores Islands,PRT1_V1,0.0
+PRT,Madeira Islands,PRT2_V1,0.0
+UMI,Baker Island,UMI1_V1,0.0
+UMI,Wake Island,UMI2_V1,0.0
+UMI,Howland Island,UMI3_V1,0.0
+UMI,Jarvis Island,UMI4_V1,0.0
+UMI,Johnston Atoll,UMI5_V1,0.0
+UMI,Kingman Reef,UMI6_V1,0.0
+UMI,Midway Islands,UMI7_V1,0.0
+UMI,Palmyra Atoll,UMI8_V1,0.0
+UMI,Navassa Island,UMI9_V1,0.0
+MNP,Northern Mariana Is. (USA),MNP_V1,0.0
+PRI,Puerto Rico (USA),PRI_V1,0.0
+VEN,Bird Island,VEN1_V1,0.0
+HMD,Heard Island and McDonald Islands,HMD_V1,0.0
+FLK,Falkland Islands (Malvinas),FLK_V1,0.0
+SGS,South Georgia and the South Sandwich Islands,SGS_V1,0.0
+BVT,Bouvet Island,BVT_V1,0.0

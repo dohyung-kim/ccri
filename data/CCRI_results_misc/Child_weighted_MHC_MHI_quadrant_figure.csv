@@ -1,0 +1,187 @@
+,ISO3,P1,P2,label,quadrant,color,marker
+0,MUS,1.59,2.2,Mauritius,Low P1 - Low P2,darkblue,+
+1,TUV,0.46,2.26,Tuvalu,Low P1 - Low P2,darkblue,+
+2,KIR,0.85,3.68,Kiribati,Low P1 - High P2,blue,x
+3,MHL,1.08,3.16,Marshall Islands,Low P1 - High P2,blue,x
+4,BHR,2.42,2.19,Bahrain,Low P1 - Low P2,darkblue,+
+5,FSM,0.67,3.21,Micronesia (Federated States of),Low P1 - High P2,blue,x
+6,WSM,1.5,2.32,Samoa,Low P1 - Low P2,darkblue,+
+7,MDV,0.69,1.08,Maldives,Low P1 - Low P2,darkblue,+
+8,TON,0.77,2.56,Tonga,Low P1 - High P2,blue,x
+9,COM,1.68,3.72,Comoros,Low P1 - High P2,blue,x
+10,CPV,2.27,1.83,Cape Verde,Low P1 - Low P2,darkblue,+
+11,SGP,1.08,1.28,Singapore,Low P1 - Low P2,darkblue,+
+12,VUT,2.82,4.48,Vanuatu,Low P1 - High P2,blue,x
+13,FJI,2.1,2.5,Fiji,Low P1 - High P2,blue,x
+14,STP,1.22,3.27,Sao Tome and Principe,Low P1 - High P2,blue,x
+15,NRU,0.09,1.33,Nauru,Low P1 - Low P2,darkblue,+
+16,SLB,3.22,3.16,Solomon Islands,Low P1 - High P2,blue,x
+17,AFG,5.76,6.02,Afghanistan,High P1 - High P2,#8B4513,o
+18,AGO,5.64,6.53,Angola,High P1 - High P2,#8B4513,o
+19,ALB,2.95,1.04,Albania,Low P1 - Low P2,darkblue,+
+20,SYC,0.24,2.23,Seychelles,Low P1 - Low P2,darkblue,+
+21,AND,1.13,2.19,Andorra,Low P1 - Low P2,darkblue,+
+22,ARE,4.97,2.53,United Arab Emirates,High P1 - High P2,#8B4513,o
+23,ARM,2.39,1.12,Armenia,Low P1 - Low P2,darkblue,+
+24,AUT,2.17,0.41,Austria,Low P1 - Low P2,darkblue,+
+25,AZE,3.78,3.0,Azerbaijan,Low P1 - High P2,blue,x
+26,BDI,2.76,5.69,Burundi,Low P1 - High P2,blue,x
+27,BEL,3.28,0.17,Belgium,Low P1 - Low P2,darkblue,+
+28,BEN,5.22,6.45,Benin,High P1 - High P2,#8B4513,o
+29,BFA,4.4,6.39,Burkina Faso,High P1 - High P2,#8B4513,o
+30,BGD,9.37,3.39,Bangladesh,High P1 - High P2,#8B4513,o
+31,BGR,2.43,1.32,Bulgaria,Low P1 - Low P2,darkblue,+
+32,AUS,4.95,0.28,Australia,High P1 - Low P2,#DEB887,s
+33,BIH,1.99,2.02,Bosnia and Herzegovina,Low P1 - Low P2,darkblue,+
+34,BRA,5.74,2.14,Brazil,High P1 - Low P2,#DEB887,s
+35,BRN,1.69,0.46,Brunei Darussalam,Low P1 - Low P2,darkblue,+
+36,BLR,2.48,0.13,Belarus,Low P1 - Low P2,darkblue,+
+37,BTN,2.0,2.75,Bhutan,Low P1 - High P2,blue,x
+38,BWA,4.05,3.3,Botswana,High P1 - High P2,#8B4513,o
+39,CAF,4.61,7.68,Central African Republic,High P1 - High P2,#8B4513,o
+40,CHE,2.44,0.05,Switzerland,Low P1 - Low P2,darkblue,+
+41,CHN,8.58,3.23,China,High P1 - High P2,#8B4513,o
+42,CIV,4.67,5.64,Côte d'Ivoire,High P1 - High P2,#8B4513,o
+43,CMR,5.28,5.52,Cameroon,High P1 - High P2,#8B4513,o
+44,COD,5.53,7.04,Democratic Republic of the Congo,High P1 - High P2,#8B4513,o
+45,COG,4.22,4.03,Congo,High P1 - High P2,#8B4513,o
+46,CYP,2.27,0.22,Cyprus,Low P1 - Low P2,darkblue,+
+47,CZE,2.1,1.79,Czechia,Low P1 - Low P2,darkblue,+
+48,DEU,3.2,0.37,Germany,Low P1 - Low P2,darkblue,+
+49,DJI,3.52,4.38,Djibouti,Low P1 - High P2,blue,x
+50,DNK,2.62,0.09,Denmark,Low P1 - Low P2,darkblue,+
+51,DZA,5.61,1.6,Algeria,High P1 - Low P2,#DEB887,s
+52,EGY,5.84,3.32,Egypt,High P1 - High P2,#8B4513,o
+53,ERI,5.25,5.56,Eritrea,High P1 - High P2,#8B4513,o
+54,ESP,5.7,1.03,Spain,High P1 - Low P2,#DEB887,s
+55,EST,2.04,0.43,Estonia,Low P1 - Low P2,darkblue,+
+56,ETH,5.55,7.27,Ethiopia,High P1 - High P2,#8B4513,o
+57,FIN,2.33,0.14,Finland,Low P1 - Low P2,darkblue,+
+58,FRA,4.73,0.11,France,High P1 - Low P2,#DEB887,s
+59,GAB,3.08,3.98,Gabon,Low P1 - High P2,blue,x
+60,GBR,4.21,0.22,United Kingdom of Great Britain & Northern Ireland,High P1 - Low P2,#DEB887,s
+61,GEO,2.92,1.59,Georgia,Low P1 - Low P2,darkblue,+
+62,GHA,5.29,4.06,Ghana,High P1 - High P2,#8B4513,o
+63,GIN,5.25,6.91,Guinea,High P1 - High P2,#8B4513,o
+64,GMB,4.23,3.96,Gambia,High P1 - High P2,#8B4513,o
+65,GNB,3.97,6.15,Guinea-Bissau,High P1 - High P2,#8B4513,o
+66,GNQ,3.04,5.0,Equatorial Guinea,Low P1 - High P2,blue,x
+67,GRC,3.25,1.12,Greece,Low P1 - Low P2,darkblue,+
+68,GTM,4.78,4.47,Guatemala,High P1 - High P2,#8B4513,o
+69,HRV,2.5,1.25,Croatia,Low P1 - Low P2,darkblue,+
+70,HUN,2.3,0.15,Hungary,Low P1 - Low P2,darkblue,+
+71,IDN,6.74,3.74,Indonesia,High P1 - High P2,#8B4513,o
+72,IND,8.91,4.06,India,High P1 - High P2,#8B4513,o
+73,IRL,2.87,0.24,Ireland,Low P1 - Low P2,darkblue,+
+74,IRN,7.07,2.51,Iran (Islamic Republic of),High P1 - High P2,#8B4513,o
+75,IRQ,6.11,2.42,Iraq,High P1 - High P2,#8B4513,o
+76,ISL,1.48,0.69,Iceland,Low P1 - Low P2,darkblue,+
+77,ISR,3.16,0.25,Israel,Low P1 - Low P2,darkblue,+
+78,ITA,3.75,0.15,Italy,Low P1 - Low P2,darkblue,+
+79,JOR,3.88,2.12,Jordan,Low P1 - Low P2,darkblue,+
+80,JPN,6.08,0.41,Japan,High P1 - Low P2,#DEB887,s
+81,KAZ,4.34,1.1,Kazakhstan,High P1 - Low P2,#DEB887,s
+82,KEN,4.91,5.33,Kenya,High P1 - High P2,#8B4513,o
+83,KGZ,3.27,1.59,Kyrgyzstan,Low P1 - Low P2,darkblue,+
+84,KHM,8.78,4.03,Cambodia,High P1 - High P2,#8B4513,o
+85,KOR,3.8,1.12,Republic of Korea,Low P1 - Low P2,darkblue,+
+86,KWT,4.46,2.52,Kuwait,High P1 - High P2,#8B4513,o
+87,LAO,7.63,4.01,Lao People's Democratic Republic,High P1 - High P2,#8B4513,o
+88,LBN,2.33,2.32,Lebanon,Low P1 - Low P2,darkblue,+
+89,LBR,4.32,5.85,Liberia,High P1 - High P2,#8B4513,o
+90,LBY,4.5,2.41,Libya,High P1 - High P2,#8B4513,o
+91,LKA,5.07,1.5,Sri Lanka,High P1 - Low P2,#DEB887,s
+92,LSO,1.99,3.8,Lesotho,Low P1 - High P2,blue,x
+93,LTU,2.09,0.25,Lithuania,Low P1 - Low P2,darkblue,+
+94,LUX,1.61,0.02,Luxembourg,Low P1 - Low P2,darkblue,+
+95,LVA,2.36,0.29,Latvia,Low P1 - Low P2,darkblue,+
+96,MAR,6.58,3.58,Morocco,High P1 - High P2,#8B4513,o
+97,CAN,3.69,0.21,Canada,Low P1 - Low P2,darkblue,+
+98,MDA,2.43,2.0,Moldova,Low P1 - Low P2,darkblue,+
+99,MDG,8.28,7.27,Madagascar,High P1 - High P2,#8B4513,o
+100,MKD,2.29,1.65,North Macedonia,Low P1 - Low P2,darkblue,+
+101,MEX,6.85,2.41,Mexico,High P1 - High P2,#8B4513,o
+102,MLI,5.2,6.25,Mali,High P1 - High P2,#8B4513,o
+103,MLT,1.09,0.78,Malta,Low P1 - Low P2,darkblue,+
+104,MNE,2.13,1.45,Montenegro,Low P1 - Low P2,darkblue,+
+105,MMR,10.0,4.6,Myanmar,High P1 - High P2,#8B4513,o
+106,MNG,2.7,1.39,Mongolia,Low P1 - Low P2,darkblue,+
+107,MOZ,7.49,7.23,Mozambique,High P1 - High P2,#8B4513,o
+108,MWI,3.33,4.37,Malawi,Low P1 - High P2,blue,x
+109,MRT,6.07,5.01,Mauritania,High P1 - High P2,#8B4513,o
+110,NAM,5.44,3.43,Namibia,High P1 - High P2,#8B4513,o
+111,NER,4.71,8.57,Niger,High P1 - High P2,#8B4513,o
+112,MYS,4.89,3.32,Malaysia,High P1 - High P2,#8B4513,o
+113,NLD,3.92,0.19,Netherlands,High P1 - Low P2,#DEB887,s
+114,NGA,6.27,7.03,Nigeria,High P1 - High P2,#8B4513,o
+115,NPL,3.81,3.43,Nepal,Low P1 - High P2,blue,x
+116,NOR,2.7,0.06,Norway,Low P1 - Low P2,darkblue,+
+117,OMN,5.27,2.63,Oman,High P1 - High P2,#8B4513,o
+118,PAK,9.46,5.21,Pakistan,High P1 - High P2,#8B4513,o
+119,PHL,7.06,4.46,Philippines,High P1 - High P2,#8B4513,o
+120,PNG,4.69,5.87,Papua New Guinea,High P1 - High P2,#8B4513,o
+121,POL,2.93,0.32,Poland,Low P1 - Low P2,darkblue,+
+122,PRK,4.69,1.43,Democratic People's Republic of Korea,High P1 - Low P2,#DEB887,s
+123,PRT,4.16,0.33,Portugal,High P1 - Low P2,#DEB887,s
+124,QAT,2.67,1.84,Qatar,Low P1 - Low P2,darkblue,+
+125,ROU,3.06,1.04,Romania,Low P1 - Low P2,darkblue,+
+126,NZL,3.32,0.72,New Zealand,Low P1 - Low P2,darkblue,+
+127,RWA,2.18,4.22,Rwanda,Low P1 - High P2,blue,x
+128,SAU,5.33,2.1,Saudi Arabia,High P1 - Low P2,#DEB887,s
+129,SDN,7.5,6.72,Sudan,High P1 - High P2,#8B4513,o
+130,SEN,5.03,4.55,Senegal,High P1 - High P2,#8B4513,o
+131,SLE,5.07,5.98,Sierra Leone,High P1 - High P2,#8B4513,o
+132,SLV,3.85,3.23,El Salvador,Low P1 - High P2,blue,x
+133,SOM,7.7,6.4,Somalia,High P1 - High P2,#8B4513,o
+134,SRB,2.16,1.38,Serbia,Low P1 - Low P2,darkblue,+
+135,SSD,6.12,6.33,South Sudan,High P1 - High P2,#8B4513,o
+136,SVK,2.34,0.49,Slovakia,Low P1 - Low P2,darkblue,+
+137,SVN,2.28,0.31,Slovenia,Low P1 - Low P2,darkblue,+
+138,SWE,2.81,0.1,Sweden,Low P1 - Low P2,darkblue,+
+139,SWZ,3.1,3.34,Eswatini,Low P1 - High P2,blue,x
+140,SYR,5.15,2.36,Syrian Arab Republic,High P1 - Low P2,#DEB887,s
+141,TCD,6.9,7.88,Chad,High P1 - High P2,#8B4513,o
+142,TGO,4.65,4.63,Togo,High P1 - High P2,#8B4513,o
+143,THA,7.4,2.47,Thailand,High P1 - High P2,#8B4513,o
+144,TJK,4.23,2.01,Tajikistan,High P1 - Low P2,#DEB887,s
+145,TKM,5.77,1.0,Turkmenistan,High P1 - Low P2,#DEB887,s
+146,TLS,3.14,3.76,Timor-Leste,Low P1 - High P2,blue,x
+147,TUN,4.95,1.33,Tunisia,High P1 - Low P2,#DEB887,s
+148,TUR,4.48,2.23,Republic of Türkiye,High P1 - Low P2,#DEB887,s
+149,TZA,4.78,5.94,United Republic of Tanzania,High P1 - High P2,#8B4513,o
+150,UGA,3.95,5.38,Uganda,High P1 - High P2,#8B4513,o
+151,UKR,3.34,1.15,Ukraine,Low P1 - Low P2,darkblue,+
+152,RUS,4.74,2.1,Russian Federation,High P1 - Low P2,#DEB887,s
+153,UZB,4.79,2.16,Uzbekistan,High P1 - Low P2,#DEB887,s
+154,VNM,9.66,3.03,Viet Nam,High P1 - High P2,#8B4513,o
+155,YEM,6.31,5.13,Yemen,High P1 - High P2,#8B4513,o
+156,ZAF,5.62,3.33,South Africa,High P1 - High P2,#8B4513,o
+157,ZMB,4.12,4.85,Zambia,High P1 - High P2,#8B4513,o
+158,ZWE,5.09,4.46,Zimbabwe,High P1 - High P2,#8B4513,o
+159,USA,6.5,0.57,United States of America,High P1 - Low P2,#DEB887,s
+160,BOL,5.18,2.64,Bolivia (Plurinational State of),High P1 - High P2,#8B4513,o
+161,BLZ,4.12,1.94,Belize,High P1 - Low P2,#DEB887,s
+162,SUR,3.21,1.99,Suriname,Low P1 - Low P2,darkblue,+
+163,PRY,3.54,2.09,Paraguay,Low P1 - Low P2,darkblue,+
+164,ECU,3.98,2.98,Ecuador,High P1 - High P2,#8B4513,o
+165,ARG,4.7,1.57,Argentina,High P1 - Low P2,#DEB887,s
+166,GUY,5.38,0.95,Guyana,High P1 - Low P2,#DEB887,s
+167,HND,5.3,3.69,Honduras,High P1 - High P2,#8B4513,o
+168,PAN,3.16,2.58,Panama,Low P1 - High P2,blue,x
+169,CRI,3.35,1.09,Costa Rica,Low P1 - Low P2,darkblue,+
+170,PER,5.25,3.33,Peru,High P1 - High P2,#8B4513,o
+171,URY,2.68,1.38,Uruguay,Low P1 - Low P2,darkblue,+
+172,VEN,7.57,1.82,Venezuela,High P1 - Low P2,#DEB887,s
+173,COL,6.18,2.97,Colombia,High P1 - High P2,#8B4513,o
+174,CHL,3.21,1.01,Chile,Low P1 - Low P2,darkblue,+
+175,DOM,3.87,1.99,Dominican Republic,Low P1 - Low P2,darkblue,+
+176,BRB,1.13,1.79,Barbados,Low P1 - Low P2,darkblue,+
+177,KNA,1.11,2.55,Saint Kitts and Nevis,Low P1 - High P2,blue,x
+178,VCT,1.02,2.72,Saint Vincent and the Grenadines,Low P1 - High P2,blue,x
+179,TTO,1.78,1.96,Trinidad and Tobago,Low P1 - Low P2,darkblue,+
+180,DMA,1.15,3.04,Dominica,Low P1 - High P2,blue,x
+181,CUB,4.6,2.22,Cuba,High P1 - Low P2,#DEB887,s
+182,JAM,2.41,1.71,Jamaica,Low P1 - Low P2,darkblue,+
+183,LCA,1.23,1.84,Saint Lucia,Low P1 - Low P2,darkblue,+
+184,HTI,4.16,5.04,Haiti,High P1 - High P2,#8B4513,o
+185,BHS,2.19,2.71,Bahamas,Low P1 - High P2,blue,x

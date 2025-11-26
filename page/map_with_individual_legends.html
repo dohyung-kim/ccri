@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d40dfa5d30bf130018642fbbe9c9921f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div id="legend_Child_Population" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: block;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Child Population</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Hazard_Count_Overlay" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Number of Hazards (1-10)</b><br><div style="line-height: 1.3;"><span style="background:#000004;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1</div><div style="line-height: 1.3;"><span style="background:#1b0c41;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2</div><div style="line-height: 1.3;"><span style="background:#4a0c6b;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3</div><div style="line-height: 1.3;"><span style="background:#781c6d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>4</div><div style="line-height: 1.3;"><span style="background:#a52c60;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>5</div><div style="line-height: 1.3;"><span style="background:#cf4446;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>6</div><div style="line-height: 1.3;"><span style="background:#ed6925;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>7</div><div style="line-height: 1.3;"><span style="background:#fb9b06;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>8</div><div style="line-height: 1.3;"><span style="background:#f7d13d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>9</div><div style="line-height: 1.3;"><span style="background:#fcffa4;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>10</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_river" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (river)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_coastal" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (coastal)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_tropical" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (tropical)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_agricultural" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (agricultural)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_drought" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (drought)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_drought" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (drought)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_heatwave" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (heatwave)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_heatwave" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (heatwave)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_heatwave" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (heatwave)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_extreme" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (extreme)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_fire" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (fire)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_fire" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (fire)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_sand" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (sand)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_air" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (air)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_vectorborne" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (vectorborne)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    <div id="legend_Pop_Exposed_vectorborne" style="
+        position: fixed; 
+        bottom: 30px; 
+        left: 10px; 
+        width: auto; 
+        max-width: 230px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #bbb;
+        border-radius: 5px; 
+        z-index: 9990; 
+        padding: 10px;
+        font-size: 12px; 
+        font-family: Arial, sans-serif;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    ">
+        <b>Exposed Pop. (vectorborne)</b><br><div style="line-height: 1.3;"><span style="background:#fff5f0;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.00 &ndash; 0.40</div><div style="line-height: 1.3;"><span style="background:#fee0d2;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.40 &ndash; 0.80</div><div style="line-height: 1.3;"><span style="background:#fcbba1;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>0.80 &ndash; 1.20</div><div style="line-height: 1.3;"><span style="background:#fc9272;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.20 &ndash; 1.60</div><div style="line-height: 1.3;"><span style="background:#fb6a4a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>1.60 &ndash; 2.00</div><div style="line-height: 1.3;"><span style="background:#ef3b2c;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.00 &ndash; 2.40</div><div style="line-height: 1.3;"><span style="background:#cb181d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.40 &ndash; 2.80</div><div style="line-height: 1.3;"><span style="background:#a50f15;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>2.80 &ndash; 3.20</div><div style="line-height: 1.3;"><span style="background:#67000d;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.20 &ndash; 3.60</div><div style="line-height: 1.3;"><span style="background:#4d000a;width:18px;height:12px;display:inline-block;margin-right:5px;vertical-align:middle;border:1px solid #ccc;"></span>3.60 &ndash; 4.00</div>
+    </div>
+    
+    
+<script type="text/javascript">
+    function initIndividualLegendToggle() {
+        var map_obj = window.map_d40dfa5d30bf130018642fbbe9c9921f;
+        var layerToLegendIdMap = {"Child Population": "legend_Child_Population", "Hazard Count Overlay": "legend_Hazard_Count_Overlay", "Pop. Exposed: river": "legend_Pop_Exposed_river", "Pop. Exposed: coastal": "legend_Pop_Exposed_coastal", "Pop. Exposed: tropical": "legend_Pop_Exposed_tropical", "Pop. Exposed: agricultural": "legend_Pop_Exposed_agricultural", "Pop. Exposed: drought": "legend_Pop_Exposed_drought", "Pop. Exposed: heatwave": "legend_Pop_Exposed_heatwave", "Pop. Exposed: extreme": "legend_Pop_Exposed_extreme", "Pop. Exposed: fire": "legend_Pop_Exposed_fire", "Pop. Exposed: sand": "legend_Pop_Exposed_sand", "Pop. Exposed: air": "legend_Pop_Exposed_air", "Pop. Exposed: vectorborne": "legend_Pop_Exposed_vectorborne"};
+
+        if (!map_obj) {
+            setTimeout(initIndividualLegendToggle, 500);
+            return;
+        }
+
+        function handleIndividualLayerToggle(e) {
+            var eventLayerName = e.name;
+            var eventType = e.type;
+            var legendId = layerToLegendIdMap[eventLayerName];
+
+            if (legendId) {
+                var legendDiv = document.getElementById(legendId);
+                if (legendDiv) {
+                    if (eventType === 'overlayadd') {
+                        legendDiv.style.display = 'block';
+                    } else if (eventType === 'overlayremove') {
+                        legendDiv.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        map_obj.on('overlayadd', handleIndividualLayerToggle);
+        map_obj.on('overlayremove', handleIndividualLayerToggle);
+
+        // Ensure initial visibility of legends matches layer visibility
+        for (var layerNameInMap in layerToLegendIdMap) {
+            if (layerToLegendIdMap.hasOwnProperty(layerNameInMap)) {
+                var legendDivId = layerToLegendIdMap[layerNameInMap];
+                var legendDivElement = document.getElementById(legendDivId);
+                if (legendDivElement) {
+                    var layerIsOn = false;
+                    map_obj.eachLayer(function(l) {
+                        if (l.options && l.options.name === layerNameInMap && map_obj.hasLayer(l)) {
+                            layerIsOn = true;
+                        }
+                    });
+                    legendDivElement.style.display = layerIsOn ? 'block' : 'none';
+                }
+            }
+        }
+    }
+
+    if (document.readyState === "complete") {
+        initIndividualLegendToggle();
+    } else {
+        document.addEventListener("DOMContentLoaded", initIndividualLegendToggle);
+    }
+</script>
+    
+            <div class="folium-map" id="map_d40dfa5d30bf130018642fbbe9c9921f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d40dfa5d30bf130018642fbbe9c9921f = L.map(
+                "map_d40dfa5d30bf130018642fbbe9c9921f",
+                {
+                    center: [13.0, 101.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cbe9bc882c3fba3aa0d148539d2deb37 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cbe9bc882c3fba3aa0d148539d2deb37.addTo(map_d40dfa5d30bf130018642fbbe9c9921f);
+        
+    
+            var tile_layer_ffc2884a5866b8edf441fb819aa47fa3 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/e024523872c69bc0e96c5dd071a40cd0-0b747fb61fab53e822c3e487dfb73c8a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ffc2884a5866b8edf441fb819aa47fa3.addTo(map_d40dfa5d30bf130018642fbbe9c9921f);
+        
+    
+            var tile_layer_2f5a5dae72710e5cabb20dee755039db = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/2f23108978fe86592de5e99aaaeec3a0-d147525d11f5da61b6f745ad7655ac5d/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_08450587c72d2e8a3b5d201537ff81fa = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/be6bcecafbf202c73b85423ccc27b584-ac023ff68c7fc413105d1b6cec9f687a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_6a65f0255ff73fa7d42ba625943d9f2a = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/db2c2b7dfec1146abd084218c413721e-1ca0bee8f021f1308de03b058917c7f2/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_958615a0231f527a670826311650b5e0 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/a0df78a65e616706a05159fbe008696a-3f80de36056a0c411b3c4bfce4216ee2/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_d7cd8b700b124ac87a78000bac0c8d0d = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/063c1821f731db1fc2f83d8976ca7fa9-b6ea87361d594ecf157f014a87c55bf0/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_931cbb0a1945c068ca32644ecb99cf39 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/a4610fc770698dcb0648e8375d5c8a73-65ab1aa16b791377e0b1f3e4eb6f910c/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_6820ef3e6cfc155fa2387e4138477eae = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/3faa9272ba540224d5dc2b7d6ea3f029-0a7614cd1eee31dae8b1e467f3958856/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_a1c755a72ba3a203d7b3a19311994c46 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/e71c3f6a5ea2c04b6f620ecac493d089-eb86c823cbe5aa0219922f1270c90f1e/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_5b5ec7d41bbcdba50dba41ae3cfb279e = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/770dacf8b59309fe5b7c2c4028c13790-978a8146f1da5d6ff209637012ea0650/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_fa65f03e08ebcc2a03fcb02c82243905 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/054e2364be95f1c9bf44912c8515e7e3-341ddedf86956e416124d68d4ff7dcc0/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_63df0f6d950cd9fcccbe78006933d1d8 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/3ca2b0e0ff0cbaaa5a19cefa4e0ddf79-0a5cbdc5af891017ace5be9e8a24fa16/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_843251ff2f65d4795e0b57776f54c6ca = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/e2cda01c530153095a7dadd2d997f5d0-acbcc1c6de9540788532fb683feba4f6/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_fa7879f4632f006902906fb5ff0c05dd = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/87b2e126e1cdc4a6c326e450f081781c-a8e0b07d00634df23263bca02b2b6627/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_fd21b9cf861dd242936bae8dfbb8b109 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/8aa78e07113a9271db1950c7595f62fe-b2971b7f9f9081efa0b853d77dd4f251/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_18ba233e4e44001b6390b486cd1b33a7 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/6e3dfe71dc8dac0c464f7c66c13d70d5-6c1450a1967d6e71bd56fee9f6870a8a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_3aa756f3f978251802b9d0735dfed0ad = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/ec1e09c16055deb1c81d2b5f76904443-7e8b44cbe870d3036b5ca64443219806/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_5f6fac0c3e1bc652816f93d32d002682 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/unicef-ccri/maps/4a9dc7e4f9baee99db070258eb4a2201-fb1f36804a61cac49ede3879b49135bf/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var layer_control_13d86f7bcbe0dc925bda16cdacccc068_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_cbe9bc882c3fba3aa0d148539d2deb37,
+                },
+                overlays :  {
+                    "Child Population" : tile_layer_ffc2884a5866b8edf441fb819aa47fa3,
+                    "Hazard Count Overlay" : tile_layer_2f5a5dae72710e5cabb20dee755039db,
+                    "Pop. Exposed: river" : tile_layer_08450587c72d2e8a3b5d201537ff81fa,
+                    "Pop. Exposed: coastal" : tile_layer_6a65f0255ff73fa7d42ba625943d9f2a,
+                    "Pop. Exposed: tropical" : tile_layer_958615a0231f527a670826311650b5e0,
+                    "Pop. Exposed: agricultural" : tile_layer_d7cd8b700b124ac87a78000bac0c8d0d,
+                    "Pop. Exposed: drought" : tile_layer_6820ef3e6cfc155fa2387e4138477eae,
+                    "Pop. Exposed: heatwave" : tile_layer_fa65f03e08ebcc2a03fcb02c82243905,
+                    "Pop. Exposed: extreme" : tile_layer_63df0f6d950cd9fcccbe78006933d1d8,
+                    "Pop. Exposed: fire" : tile_layer_fa7879f4632f006902906fb5ff0c05dd,
+                    "Pop. Exposed: sand" : tile_layer_fd21b9cf861dd242936bae8dfbb8b109,
+                    "Pop. Exposed: air" : tile_layer_18ba233e4e44001b6390b486cd1b33a7,
+                    "Pop. Exposed: vectorborne" : tile_layer_5f6fac0c3e1bc652816f93d32d002682,
+                },
+            };
+            let layer_control_13d86f7bcbe0dc925bda16cdacccc068 = L.control.layers(
+                layer_control_13d86f7bcbe0dc925bda16cdacccc068_layers.base_layers,
+                layer_control_13d86f7bcbe0dc925bda16cdacccc068_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_d40dfa5d30bf130018642fbbe9c9921f);
+
+        
+</script>
+</html>
